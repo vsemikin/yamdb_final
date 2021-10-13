@@ -16,8 +16,8 @@ services:
     image: vsemikin/yamdb
     restart: always
     volumes:
-      - static_value:/home/vsemikin/static/
-      - media_value:/home/vsemikin/static/
+      - static_value:/code/static/
+      - media_value:/code/static/
     depends_on:
       - db
     env_file:
