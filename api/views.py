@@ -8,14 +8,9 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .filters import TitleFilter
 from .models import Category, Genre, Title
 from .permissions import IsGetOrIsAdmin, IsOwnerOrModeratorOrAdmin
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleReadSerializer,
-    TitleWriteSerializer,
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleWriteSerializer)
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
