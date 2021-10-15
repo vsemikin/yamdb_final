@@ -6,9 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = str(os.environ.get('DJANGO_SECRET_KEY'))
 
-DEBUG = os.environ.get('DJANGO_DEBUG')
+DEBUG = str(os.environ.get('DJANGO_DEBUG'))
 
-ALLOWED_HOSTS = [os.environ.get('DJANGO_ALLOWED_HOSTS')]
+ALLOWED_HOSTS = [str(os.environ.get('DJANGO_ALLOWED_HOSTS'))]
 
 
 INSTALLED_APPS = [
