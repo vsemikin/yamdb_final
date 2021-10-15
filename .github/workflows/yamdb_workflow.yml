@@ -1,4 +1,4 @@
-name: YaMDB workflow
+name: YaMDB workflow tests
 
 on: [push]
 
@@ -22,10 +22,18 @@ jobs:
         python -m flake8
         pytest
 
+
+name: YaMDB workflow build_deploy_message
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
-    needs: tests
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -60,6 +68,9 @@ jobs:
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env
+          echo DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} >> .env
+          echo DJANGO_DEBUG=${{ secrets.DJANGO_DEBUG }} >> .env
+          echo DJANGO_ALLOWED_HOSTS=${{ secrets.DJANGO_ALLOWED_HOSTS }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
           echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
           echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
