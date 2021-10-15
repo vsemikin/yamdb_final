@@ -8,15 +8,13 @@
 
 Инструкция по установке Docker:
 
-```
 https://docs.docker.com/engine/install/ubuntu/
-```
 
 ### Клонировать образ проекта из Docker Hub:
 
 Клонировать образ проекта на сервер:
 
-```docker
+```bash
 docker pull vsemikin/yamdb
 ```
 ### Что должен содержать файл .env:
@@ -33,40 +31,55 @@ POSTGRES_PASSWORD # пароль для подключения к БД
 DB_HOST # название контейнера
 DB_PORT # порт для подключения к БД
 ```
+
+### Заполнение базы:
+
+Сформировать файл json из начальных данных:
+
+```bash
+python manage.py dumpdata > fixtures.json
+```
+
 ### Команды для docker:
 
 Вход в контейнер:
 
-```docker
+```bash
 docker exec -it <CONTAINER ID> bash
 ```
 
 Запуск миграций:
 
-```docker
+```bash
 docker-compose exec web python manage.py migrate --noinput
 ```
 
 Запуск тестов:
 
-```docker
+```bash
 docker-compose exec web pytest
+```
+
+Запустить проект:
+
+```bash
+docker-compose up
 ```
 
 Остановка:
 
-```docker
+```bash
 docker-compose stop
 ```
 
 ### Технологии проекта:
 
-Python
-Django
-PostgreSQL
-Docker
-NGINX
-GitHub
+* Python
+* Django
+* PostgreSQL
+* Docker
+* NGINX
+* GitHub
 
 ### Об авторе:
 
