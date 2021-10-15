@@ -8,7 +8,7 @@ SECRET_KEY = str(os.environ.get('DJANGO_SECRET_KEY'))
 
 DEBUG = os.environ.get('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = [os.environ.get('DJANGO_ALLOWED_HOSTS'), ]
+ALLOWED_HOSTS = [os.environ.get('DJANGO_ALLOWED_HOSTS')]
 
 
 INSTALLED_APPS = [
