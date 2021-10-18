@@ -1,4 +1,4 @@
-### Workflow статус:
+### Статус Workflow:
 
 ![YaMDB workflow](https://github.com/vsemikin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
