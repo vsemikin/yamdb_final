@@ -25,7 +25,6 @@ docker pull vsemikin/yamdb
 
 ```yaml
 DJANGO_SECRET_KEY # секретный ключ проекта
-DJANGO_DEBUG # активировать/деактивировать режим разработчика
 DJANGO_ALLOWED_HOSTS # список хостов для обслуживания проектом
 DB_NAME # имя базы данных
 POSTGRES_USER # логин для подключения к базе данных
