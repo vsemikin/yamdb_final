@@ -16,7 +16,7 @@ services:
     image: vsemikin/yamdb
     restart: always
     volumes:
-      - /home/vsemikin/static/redoc.yaml:/code/static/redoc.yaml
+      - /home/vsemikin/static/redoc.yaml:static_value
       - static_value:/code/static/
       - media_value:/code/static/
     depends_on:
