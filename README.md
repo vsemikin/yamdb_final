@@ -88,4 +88,4 @@ docker-compose stop
 
 ### Проект:
 
-http://178.154.240.96/
+http://178.154.240.96/redoc/
