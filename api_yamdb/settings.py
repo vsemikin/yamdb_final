@@ -12,7 +12,7 @@ SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS')
+ALLOWED_HOSTS = list(os.getenv('DJANGO_ALLOWED_HOSTS'))
 
 
 INSTALLED_APPS = [
