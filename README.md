@@ -1,3 +1,5 @@
+### Учебный проект Яндекс Практикум по работе с инфраструктурой разработки
+
 ### Workflow статус:
 
 ![YaMDB workflow](https://github.com/vsemikin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
